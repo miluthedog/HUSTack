@@ -1,3 +1,4 @@
 *.json
+*.exe
 helloworld.exe
 helloworld.cpp
