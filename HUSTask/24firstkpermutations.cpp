@@ -20,7 +20,7 @@ void solution(){
     }
 }
 
-void Try(int k){
+void son(int k){
     for(int v = 1; v <= n; v++){ 
         if (used[v]==0){
             x[k] = v; 
@@ -28,7 +28,7 @@ void Try(int k){
             if (k == n)
                 solution();
             else
-                Try(k+1);
+                son(k+1);
             used[v] = 0;
             }
     }
@@ -37,5 +37,5 @@ int main(){
     scanf("%d",&n);  
     scanf("%d",&k);
     for(int v = 1; v <= n; v++) used[v] = 0; 
-    Try(1);
+    son(1);
 }
