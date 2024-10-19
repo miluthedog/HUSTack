@@ -19,6 +19,7 @@ Node* root(int u){
 void left(int u, int v){
     if (memo[u] == nullptr && memo[v] != nullptr){
         Node* mama = memo[v];
+        if (mama->left != nullptr) return;
         Node* baby = new Node();
         baby->id = u;
         mama->left = baby;
@@ -28,6 +29,7 @@ void left(int u, int v){
 void right(int u, int v){
     if (memo[u] == nullptr && memo[v] != nullptr){
         Node* mama = memo[v];
+        if (mama->right != nullptr) return;
         Node* baby = new Node();
         baby->id = u;
         mama->right = baby;
