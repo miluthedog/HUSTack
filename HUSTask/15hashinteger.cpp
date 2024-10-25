@@ -1,6 +1,5 @@
 #include <bits/stdc++.h> 
 #include <unordered_map>
-using namespace std; unordered_map <string, int> database;
-int main(){ string num = ""; string input = "";
-    while (num!="*"){cin >> num; database[num] = 1;}
-    while (input!="***"){cin >> input >> num; if(input == "find"){cout << database[num] << endl;} else if (input == "insert"){cout << abs(database[num]-1) << endl;database[num] = 1;}} return 0;}
+using namespace std; unordered_map <string, int> a;
+
+int main(){string b="";string c="";while(b!="*"){cin>>b;a[b]=1;}while(c!="***"){cin>>c>>b;if(c=="find"){cout<<a[b]<< endl;}else if(c =="insert"){cout<<abs(a[b]-1)<<endl;a[b]=1;}}return 0;}
