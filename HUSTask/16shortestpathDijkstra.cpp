@@ -26,7 +26,7 @@ int main(){
 
     // Dijkstra
     while (!pqueue.empty()){
-        int curPath= pqueue.top().first;
+        int curPath = pqueue.top().first;
         int curNode = pqueue.top().second;
         pqueue.pop();
 
