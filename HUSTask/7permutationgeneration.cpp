@@ -2,7 +2,7 @@
 
 int n;
 int x[100];
-int used[100];
+bool used[100];
 
 void solution(){
     for(int k = 1; k <= n; k++)
@@ -10,22 +10,22 @@ void solution(){
     printf("\n");
 }
 
-void Try(int k){
+void loop(int k){
     for(int v = 1; v <= n; v++){ 
-        if (used[v]==0){
+        if (used[v]==false){
             x[k] = v; 
-            used[v] = 1;
+            used[v] = true;
             if (k == n)
                 solution();
             else
-                Try(k+1);
-            used[v] = 0;
+                loop(k+1);
+            used[v] = false;
             }
     }
 }
 int main(){
     scanf("%d",&n);  
     for(int v = 1; v <= n; v++) used[v] = 0; 
-    Try(1);
+    loop(1);
 }
 
